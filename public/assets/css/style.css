@@ -1,0 +1,161 @@
+/* Estilos generales */
+* {
+  padding: 0px;
+  margin: 0px;
+}
+body {
+  font-family: arial;
+  /* dar mas padding para centrar mas  o achicar contenedor */
+  padding: 1rem;
+  background-color: rgb(236, 235, 235);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+.cabecera {
+  width: 1000px;
+  font-family: Arial;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+  /* border: 1px solid #FFFFFF; */
+  border-radius: 15px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.241); /* Ajusta el valor del desenfoque */
+  .input-container {
+    display: flex;
+    width: 130px;
+    input {
+      background-color: whitesmoke;
+      width: 100%;
+      padding: 8px 30px 8px 10px; /* Ajusta el padding según sea necesario */
+      border: 1px solid lightgray;
+      border-radius: 10px;
+      box-sizing: border-box;
+      background-image: url("../images/busqueda.png"); /* Ruta a tu archivo de icono */
+      background-repeat: no-repeat;
+      background-position: 8px center; /* Ajusta la posición del icono */
+      background-size: 15px; /* Ajusta el tamaño del icono */
+      padding-left: 30%; /* Asegura espacio suficiente para el icono */
+    }
+  }
+  /* *********************************************** */
+  /* ICONOS  */
+
+  .icono {
+    height: 35px; /* Alto deseado del icono */
+    overflow: hidden; /* Oculta el exceso de imagen fuera del círculo */
+    margin-right: 1rem;
+  }
+  .perfil {
+    height: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.045);
+    border-radius: 100%;
+    background-color: lightslategray;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.241); /* Ajusta el valor del desenfoque */
+  }
+}
+
+/* padding-right: 50px; */
+/* *********************************************** */
+/* *********************************************** */
+/* CONTENEDOR DEL CUERPO */
+.contenedor-cuerpo {
+  display: flex;
+
+  /* CONTENEDOR BARRA LATERAL */
+  .contenedor-sidebar {
+    background-color: purple;
+    display: inline;
+    padding: 1rem;
+    ul {
+      display: flex;
+      flex-direction: column;
+      padding: 0px;
+      gap: 2rem;
+
+      li {
+        list-style: none;
+      }
+    }
+  }
+  /* *********************************************** */
+  /* CONTENEDOR BLOQUES */
+  .contenedor-bloques {
+    background-color: orange;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 1rem;
+
+    /* *********************************************** */
+    /*BLOQUE */
+    .bloque {
+      width: 200px;
+      height: 80px;
+      background-color: whitesmoke;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.241); /* Ajusta el valor del desenfoque */
+      padding: 1rem;
+      /* border: 1px solid; */
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      /* CABEZA DEL BLOQUE */
+      .bloque-cabecera {
+        display: flex;
+        justify-content: space-between;
+      }
+      /* CUERPO DEL BLOQUE */
+      .bloque-cuerpo {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+      .bloque-icono1{
+        opacity: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        width: 35px;
+        border-radius: 30px;
+        background-color: rgba(169, 169, 169, 0.281);
+        img{
+          height: 20px;
+        }
+        
+      }
+      .bloque-icono2{
+        opacity: 90%;
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        justify-content: start;
+        img{
+          margin-right: 0.3rem;
+          mix-blend-mode: multiply;
+          height: 16px;
+          background-color: rgba(0, 255, 34, 0.562);
+          border-radius: 10px;
+
+        }
+        
+      }
+      
+      /* TEXTOS */
+      .titulo {
+        font-size: 25px;
+      }
+      .parrafo {
+        font-size: 16px;
+      }
+      .parrafo2 {
+        font-size: 11px;
+      }
+    }
+  }
+}
