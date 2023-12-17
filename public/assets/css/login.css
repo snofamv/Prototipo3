@@ -1,0 +1,36 @@
+/* Estilos generales */
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: arial;
+}
+
+
+.div-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+form{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0px;
+
+
+    input{
+        height: 22px;
+
+    }
+    input[placeholder]{
+        font-size: 16px;
+    }
+
+    button{
+        height: 40px;
+    }
+    a{
+        text-decoration: none;
+    }
+}
