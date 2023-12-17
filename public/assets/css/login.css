@@ -4,7 +4,10 @@
     margin: 0px;
     font-family: arial;
 }
+body{
+    background: radial-gradient(circle, #b6d9ff, #a8a1de4e);
 
+}
 
 .div-form{
     display: flex;
@@ -13,6 +16,7 @@
     align-items: center;
 }
 form{
+    padding-top: 1rem;
     width: 250px;
     display: flex;
     flex-direction: column;
@@ -20,17 +24,24 @@ form{
 
 
     input{
+        border-radius: 15px;
         height: 22px;
-
+        text-align: center;
     }
     input[placeholder]{
         font-size: 16px;
     }
 
     button{
-        height: 40px;
+        border-radius: 20px;
+        height: 38px;
+        font-size: 18px;
+        font-weight: bold;
     }
     a{
         text-decoration: none;
+    }
+    span{
+        opacity: 80%;
     }
 }

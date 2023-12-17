@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/employee-dashboard.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="cabecera">
+        <h1>LOGO</h1>
+        <div class="input-container">
+            <input type="text" placeholder="Busqueda">
+        </div>
+        <div class="menu">
+            <a href="#"><img class="icono accion" src="assets/images/calendario-mas.png" alt="" srcset="" id="btnAbrirModal1"></a>
+            <a href="#"><img class="icono accion" src="assets/images/campana.png" alt="" srcset=""></a>
+            <a href="login.html"><img class="icono accion" src="assets/images/dejar (1).png" alt="" srcset=""></a>
+            <a href="#"><img class="icono perfil" src="https://randomuser.me/api/portraits/men/90.jpg" alt="" srcset=""></a>
+            <div class="parrafo-perfil">
+                <p>Employee</p>
+                <p>Employee@Compania.cl</p>
+            </div>
+        </div>
+        
+    </div>
+    <!-- MODALS -->
+    <!-- **************************************************************************************************************** -->
+
+        <div id="modal-operaciones" class="modal">
+            <div class="modal-contenido">
+                <span id="btnCerrarModal1" class="cerrar">&times;</span>
+                <h1>Operaciones</h1>
+                <ul>
+                    <li><button id="btnRegistroHorario">Registrar horario ingreso</button></li>
+                    <li><button id="btnSolicitarRetiro">Solicitar permiso de retiro</button></li>
+                    <li><button id="btnVerAsistencia">Ver registro de asistencia</button></li>
+                </ul>
+                <div class="contenedor-form">
+
+                <div id="modal-form" class="modal-form" hidden>
+                    
+                    <fieldset>
+                        <legend>Solicitar retiro</legend>
+                        <form action="">
+                            <div>
+                                <label for="colores">Tipo </label>
+                                <select id="colores" name="tipo">
+                                    <option value="vacaciones"> Vacaciones</option>
+                                    <option value="licencia"> Licencia medica</option>
+                                    <option value="libre"> Retiro laboral</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                
+                                <label for="">
+                                    Fecha inicio&nbsp;&nbsp;&nbsp;</label><input type="date" placeholder="Seleccionar fecha inicio">
+                                </div>
+                                <div>
+                                    <label for="">Fecha fin&nbsp;&nbsp;&nbsp;</label><input type="date" placeholder="Seleccionar fecha fin">
+                                </div>
+                                <div>
+                                    <label for="">Razon&nbsp;&nbsp;&nbsp; </label><input type="text" placeholder="Razon de retiro aqui">
+                                </div>
+                                <div>
+                                <button>Enviar</button>
+                            </div>
+                            </form>
+                        </fieldset>
+                    
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="contenedor-medio">
+            <div>
+                <button id="btnAbrirModal2">Solicitar retiro</button>
+            </div>
+        </div>
+        
+        <div id="modal-operaciones2" class="modal">
+            <div class="modal-contenido">
+                <span id="btnCerrarModal2" class="cerrar">&times;</span>
+              
+
+                <div id="modal-form2" class="modal-form" hidden>
+                    
+                    <fieldset>
+                        <legend>Solicitar retiro</legend>
+                        <form action="">
+                            <div>
+                                <label for="colores">Tipo </label>
+                                <select id="colores" name="tipo">
+                                    <option value="vacaciones"> Vacaciones</option>
+                                    <option value="licencia"> Licencia medica</option>
+                                    <option value="libre"> Retiro laboral</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                
+                                <label for="">
+                                    Fecha inicio&nbsp;&nbsp;&nbsp;</label><input type="date" placeholder="Seleccionar fecha inicio">
+                                </div>
+                                <div>
+                                    <label for="">Fecha fin&nbsp;&nbsp;&nbsp;</label><input type="date" placeholder="Seleccionar fecha fin">
+                                </div>
+                                <div>
+                                    <label for="">Razon&nbsp;&nbsp;&nbsp; </label><input type="text" placeholder="Razon de retiro aqui">
+                                </div>
+                                <div>
+                                <button>Enviar</button>
+                            </div>
+                            </form>
+                        </fieldset>
+                    
+                </div>
+            </div>
+
+            </div>
+        </div>
+        <!-- **************************************************************************************************************** -->
+         
+        
+        <!-- **************************************************************************************************************** -->
+        <div class="contenedor-cuerpo">
+    <div class="contenedor-sidebar">
+            <ul>
+                <li><a href="#"><img class="icono sidebar" src="assets/images/hogar.png" alt="" height="40px"></a></li>
+                <li><a href="#"><img class="icono sidebar" src="assets/images/comentario-alt.png" alt="" height="40px"></a></li>
+                <li><a href="#"><img class="icono sidebar" src="assets/images/ajustes.png" alt="" height="40px"></a></li>
+            </ul>
+        </div>
+        <div class="contenedor-bloques">
+            <div class="contenedor">
+                
+            <div class="bloque">
+                <div class="bloque-cabecera">
+                    <h1 class="titulo">Retiro casual</h1>
+                </div>
+                <div class="bloque-cuerpo"> 
+                        <canvas id="miCanvas1" width="100" height="100"></canvas>
+                        <ul>
+                            <li><div class="circulo"><span></span>Restantes - 3</div></li>
+                            <li><div class="circulo"><span></span>Usados - 4</div></li>
+                            <li><div class="circulo"><span></span>Total - 7</div></li>
+                        </ul>
+                </div>
+            </div>
+            <div class="bloque">
+                <div class="bloque-cabecera">
+                    <h1 class="titulo">Retiro por enfermedad</h1>
+                </div>
+                <div class="bloque-cuerpo"> 
+                        <canvas id="miCanvas2" width="100" height="100"></canvas>
+                        <ul>
+                            <li><div class="circulo"><span></span>Restantes - 3</div></li>
+                            <li><div class="circulo"><span></span>Usados - 4</div></li>
+                            <li><div class="circulo"><span></span>Total - 7</div></li>
+                        </ul>
+                </div>
+            </div>
+            <div class="bloque">
+                <div class="bloque-cabecera">
+                    <h1 class="titulo">Retiro legal</h1>
+                </div>
+                <div class="bloque-cuerpo"> 
+                        <canvas id="miCanvas3" width="100" height="100"></canvas>
+                        <ul>
+                            <li><div class="circulo"><span></span>Restantes - 3</div></li>
+                            <li><div class="circulo"><span></span>Usados - 4</div></li>
+                            <li><div class="circulo"><span></span>Total - 7</div></li>
+                        </ul>
+                </div>
+            </div>
+            <div class="bloque">
+                <div class="bloque-cabecera">
+                    <h1 class="titulo">Retiro ajustado</h1>
+                </div>
+                <div class="bloque-cuerpo"> 
+                        <canvas id="miCanvas4" width="100" height="100"></canvas>
+                        <ul>
+                            <li><div class="circulo"><span></span>Restantes - 3</div></li>
+                            <li><div class="circulo"><span></span>Usados - 4</div></li>
+                            <li><div class="circulo"><span></span>Total - 7</div></li>
+                        </ul>
+                </div>
+            </div>
+            <div class="bloque">
+                <div class="bloque-cabecera">
+                    <h1 class="titulo">Retiro sin paga</h1>
+                </div>
+                <div class="bloque-cuerpo"> 
+                        <canvas id="miCanvas5" width="100" height="100"></canvas>
+                        <ul>
+                            <li><div class="circulo"><span></span>Restantes - 3</div></li>
+                            <li><div class="circulo"><span></span>Usados - 4</div></li>
+                            <li><div class="circulo"><span></span>Total - 7</div></li>
+                        </ul>
+                </div>
+            </div>
+            <div class="bloque">
+                <div class="bloque-cabecera">
+                    <h1 class="titulo">Retiro media jornada</h1>
+                </div>
+                <div class="bloque-cuerpo"> 
+                        <canvas id="miCanvas6" width="100" height="100"></canvas>
+                        <ul>
+                            <li><div class="circulo"><span></span>Restantes - 3</div></li>
+                            <li><div class="circulo"><span></span>Usados - 4</div></li>
+                            <li><div class="circulo"><span></span>Total - 7</div></li>
+                        </ul>
+                </div>
+            </div>
+            
+        </div>
+
+        </div>
+    </div>
+</div>
+<script src="./assets/js/script-dashboard-employee.js"></script>
+</body>
+</html>

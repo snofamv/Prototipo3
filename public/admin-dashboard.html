@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="stylesheet" href="assets/css/admin-dashboard.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
     <title>Document</title>
 </head>
 <body>
@@ -13,37 +14,56 @@
             <input type="text" placeholder="Busqueda">
         </div>
         <div class="menu">
-            <a href="#"><img class="icono" src="assets/images/calendario-mas.png" alt="" srcset="" height="20px"></a>
-            <a href="#"><img class="icono" src="assets/images/campana.png" alt="" srcset="" height="20px"></a>
-            <a href="login.html"><img class="icono" src="assets/images/dejar (1).png" alt="" srcset="" height="20px"></a>
+            <a href="#"><img class="icono accion" src="assets/images/calendario-mas.png" alt="" srcset="" id="openModalBtn"></a>
+            <a href="#"><img class="icono accion" src="assets/images/campana.png" alt="" srcset=""></a>
+            <a href="login.html"><img class="icono accion" src="assets/images/dejar (1).png" alt="" srcset=""></a>
             <a href="#"><img class="icono perfil" src="https://randomuser.me/api/portraits/men/90.jpg" alt="" srcset=""></a>
+            <div class="parrafo-perfil">
+                <p>Admin</p>
+                <p>Admin@Compania.cl</p>
+            </div>
         </div>
         
     </div>
-
-    <!-- <span class="titulo-sitio-actual"><a href="#">INICIO</a></span> -->
+    <!-- MODALS -->
+    <!-- **************************************************************************************************************** -->
+    <div class="bloque-modal">
+        <div id="modal-registrar-hora" class="modal">
+            <div class="modal-content">
+                <span id="closeBtn" class="close">&times;</span>
+                <h1>Operaciones</h1>
+                <ul>
+                    <li><button>Ingresar nuevo empleado</button></li>
+                    <li><button>Afiliar empresa nueva</button></li>
+                    <li><button>Ver registro asistencia</button></li>
+                    <li><button>Ver registro informes</button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- **************************************************************************************************************** -->
 <div class="contenedor-cuerpo">
     <div class="contenedor-sidebar">
             <ul>
-                <li><a href="index.html"><img src="assets/images/hogar.png" alt="" height="40px"></a></li>
-                <li><a href="informes.html"><img src="assets/images/comentario-alt.png" alt="" height="40px"></a></li>
-                <li><a href="config.html"><img src="assets/images/ajustes.png" alt="" height="40px"></a></li>
+                <li><a href="#"><img class="icono sidebar" src="assets/images/hogar.png" alt="" height="40px"></a></li>
+                <li><a href="#"><img class="icono sidebar" src="assets/images/comentario-alt.png" alt="" height="40px"></a></li>
+                <li><a href="#"><img class="icono sidebar" src="assets/images/ajustes.png" alt="" height="40px"></a></li>
             </ul>
     </div>
     <div class="contenedor-bloques">
         <div class="contenedor">
             <div class="bloque operacion">
                 <div class="bloque-cabecera">
-                    <h1>Informes</h1>
+                    <h1 class="titulo">Nuevo Documento</h1>
                         <div class="bloque-icono1">
                             <img src="assets/images/votacion.png" alt="">
                         </div>
                 </div>
                 <div class="bloque-cuerpo"> 
-                        <h2>Generar documento</h2>
+                        <p class="parrafo">Crear un informe</p>
                             <div class="bloque-icono2">
                                 <span class="plus">+</span>
-                                <a href="#"><p>Cick aqui para generar informe!</p></a>
+                                <a  href="informes.html"><p class="parrafo2">Cick aqui para generar informe!</p></a>
                             </div>
                 </div>
             </div>
@@ -52,92 +72,92 @@
         <div class="contenedor">
             <div class="bloque">
                 <div class="bloque-cabecera">
-                    <h1>452</h1>
+                    <h1 class="titulo">452</h1>
                         <div class="bloque-icono1">
                             <img src="assets/images/usuarios-medicos.png" alt="">
                         </div>
                 </div>
                 <div class="bloque-cuerpo"> 
-                        <h2>Total empleados</h2>
+                        <p class="parrafo">Total empleados</p>
                             <div class="bloque-icono2">
                                 <span class="plus">+</span>
-                                <p>2 Nuevos empleados ingresados!</p>
+                                <p class="parrafo2">2 Nuevos empleados ingresados!</p>
                             </div>
                 </div>
             </div>
             <div class="bloque">
                 <div class="bloque-cabecera">
-                    <h1>3</h1>
+                    <h1 class="titulo">3</h1>
                         <div class="bloque-icono1">
                             <img src="assets/images/edificio.png" alt="">
                         </div>
                 </div>
                 <div class="bloque-cuerpo"> 
-                        <h2>Total empresas</h2>
+                        <p class="parrafo">Total empresas</p>
                             <div class="bloque-icono2">
                                 <span class="plus">+</span>
-                                <p>2 Nuevos contratos afiliados!</p>
+                                <p class="parrafo2">2 Nuevos contratos afiliados!</p>
                             </div>
                 </div>
             </div>
             <div class="bloque">
                 <div class="bloque-cabecera">
-                    <h1>27</h1>
+                    <h1 class="titulo">27</h1>
                         <div class="bloque-icono1">
                             <img src="assets/images/hora-veinticuatro.png" alt="">
                         </div>
                 </div>
                 <div class="bloque-cuerpo"> 
-                        <h2>Empleados ausentes</h2>
+                        <p class="parrafo">Empleados ausentes</p>
                             <div class="bloque-icono2">
                                 <span class="falta"><img src="assets/images/grafico1.png" height="15"></span>
-                                <p>22% Mas que ayer!</p>
+                                <p class="parrafo2">22% Mas que ayer!</p>
                             </div>
                 </div>
             </div>
             
             <div class="bloque">
                 <div class="bloque-cabecera">
-                    <h1>23</h1>
+                    <h1 class="titulo">23</h1>
                         <div class="bloque-icono1">
                             <img src="assets/images/vista-de-calle.png  " alt="">
                         </div>
                 </div>
                 <div class="bloque-cuerpo"> 
-                        <h2>Empleados por comuna</h2>
+                        <p class="parrafo">Empleados por comuna</p>
                             <div class="bloque-icono2">
                                 <span class="plus">+</span>
-                                <p>2 Nuevos empleados ingresados!</p>
+                                <p class="parrafo2">2 Nuevos empleados ingresados!</p>
                             </div>
                 </div>
             </div>
             <div class="bloque">
                 <div class="bloque-cabecera">
-                    <h1>422</h1>
+                    <h1 class="titulo">422</h1>
                         <div class="bloque-icono1">
                             <img src="assets/images/consultar-calendario.png" alt="">
                         </div>
                 </div>
                 <div class="bloque-cuerpo"> 
-                        <h2>Asistencia empleados</h2>
+                        <p  class="parrafo">Asistencia empleados</p>
                             <div class="bloque-icono2">
                                 <span class="falta"><img src="assets/images/grafico1.png" height="15" srcset=""></span>
-                                <p>5% Menos que ayer!</p>
+                                <p class="parrafo2">5% Menos que ayer!</p>
                             </div>
                 </div>
             </div>
             <div class="bloque">
                 <div class="bloque-cabecera">
-                    <h1>3</h1>
+                    <h1 class="titulo">3</h1>
                         <div class="bloque-icono1">
                             <img src="assets/images/licencia (1).png" alt="">
                         </div>
                 </div>
                 <div class="bloque-cuerpo"> 
-                        <h2>Informes</h2>
+                        <p  class="parrafo">Informes</p>
                             <div class="bloque-icono2">
                                 <span class="plus">+</span>
-                                <p>3 Informes generados hoy!</p>
+                                <p class="parrafo2">3 Informes generados hoy!</p>
                             </div>
                 </div>
             </div>
@@ -146,5 +166,6 @@
         </div>
     </div>
 </div>
+<script src="./assets/js/script.js"></script>
 </body>
 </html>
