@@ -1,0 +1,54 @@
+.tabla {
+  background-color: white;
+  max-height: 50vh; /* Altura máxima igual al alto de la pantalla */
+  overflow-y: auto;
+  border-radius: 10px;
+  padding: 2rem;
+  /* display: flex; */
+
+  .filtros{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;   
+  }
+  /* //*************************************************************** */
+  table {
+    th {
+      border-bottom: 1px solid;
+      padding: 10px;
+      padding: 1rem;
+    }
+
+    width: 70vw;
+    height: auto;
+    /* Aplicar estilos a las filas impares */
+    tr:nth-child(odd) {
+      background-color: #ffffff; /* Cambia el color de fondo para las filas impares */
+    }
+
+    /* Estilos para las filas pares (opcional) */
+    tr:nth-child(even) {
+      background-color: lightgrey; /* Cambia el color de fondo para las filas pares */
+    }
+
+
+}
+
+.filtros{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.input-fecha input{
+        background-color: whitesmoke;
+        width: 150px;
+        padding: 8px 30px 8px 10px; /* Ajusta el padding según sea necesario */
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        box-sizing: border-box;
+        background-image: url("../images/calendario2.png"); /* Ruta a tu archivo de icono */
+        background-repeat: no-repeat;
+        background-position: 8px center; /* Ajusta la posición del icono */
+        background-size: 23px; /* Ajusta el tamaño del icono */
+        padding-left: 30%; /* Asegura espacio suficiente para el icono */
+}}

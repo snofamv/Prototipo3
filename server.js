@@ -20,6 +20,9 @@ app.get('/cp-admin', (req, res) => {
 app.get('/cp-employee', (req, res) => {
   res.sendFile(path.join(__dirname, 'pages', 'employee-dashboard.html'));
 });
+app.get('/assistance', (req, res) => {
+  res.sendFile(path.join(__dirname, 'pages', 'table-assistance.html'));
+});
 app.get('/logout', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
@@ -28,5 +31,5 @@ app.get('/logout', (req, res) => {
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
-  console.log(`SERVER CORRIENDO EN: ${PORT}`);
+  console.log(`SERVER CORRIENDO EN: http://127.0.0.1:${PORT}`);
 });

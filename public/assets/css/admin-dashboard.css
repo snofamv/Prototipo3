@@ -127,7 +127,7 @@ body {
       }
     }
   }
-  /* *********************************************** */
+  /************************************************************************/
   /* CONTENEDOR BLOQUES */
   .contenedor-bloques {
     /* background-color: orange; */
@@ -157,7 +157,7 @@ body {
       
       transition: scale 0.2s ease;
       justify-content: center;
-      width: 200px;
+      width: 180px;
       height: 100px;
       background-color: whitesmoke;
       box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.241); /* Ajusta el valor del desenfoque */
@@ -170,7 +170,7 @@ body {
 
       &.operacion {
         height: 180px;
-        width: 250px;
+        width: 150px;
         /* align-items: start; */
         justify-content: space-evenly;
 
@@ -181,7 +181,7 @@ body {
       /* CABEZA DEL BLOQUE */
       .bloque-cabecera {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; 
         h1 {
           /* TEXTOS */
           &.titulo {
@@ -321,6 +321,95 @@ body {
     width: 50px;
     border-radius: 8px;
     opacity: 80%;
-    
   }
+}
+
+
+/* Media Query para pantallas más pequeñas que 600px */
+@media (max-width: 1367px) {
+
+  /* *********************************************** */
+/* *********************************************** */
+/* CONTENEDOR DEL CUERPO */
+.contenedor-cuerpo {
+  display: flex;
+  width: 90vw;
+
+  /* CONTENEDOR BARRA LATERAL */
+  .contenedor-sidebar {
+    height: 350px;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    display: flex;
+    padding: 0rem 0.6rem 0px 0.6rem;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.241); /* Ajusta el valor del desenfoque */
+  }
+  /************************************************************************/
+  /* CONTENEDOR BLOQUES */
+  .contenedor-bloques {
+    /* background-color: orange; */
+    
+    display: flex;
+    padding: 0px 5rem;
+    align-items: center;
+    .contenedor {
+      
+      justify-content: flex-start;
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+    }
+    /* background-color: red; */
+    /* *********************************************** */
+
+    .bloque {
+      
+      transition: scale 0.2s ease;
+      justify-content: center;
+      width: 180px;
+      height: 100px;
+      background-color: whitesmoke;
+      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.241); /* Ajusta el valor del desenfoque */
+      padding: 2rem;
+      /* border: 1px solid; */
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+
+      &.operacion {
+        height: 150px;
+        width: 170px;
+        /* align-items: start; */
+        justify-content: space-evenly;
+        margin-bottom: 10rem;
+
+        h2{
+          font-size: 20px;
+        }
+      }
+      /* CABEZA DEL BLOQUE */
+      .bloque-cabecera {
+        display: flex;
+        align-items: center;
+        /* justify-content: space-around;  */
+        h1 {
+          /* TEXTOS */
+          &.titulo {
+            
+            color: #252c58;
+            font-family: arial;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            
+          
+          }
+        }
+      }
+    }
+  }
+
+}
 }

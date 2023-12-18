@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/assets/css/employee-dashboard.css">
+    <link rel="stylesheet" href="public/assets/css/table-assistance.css">
+    <link rel="stylesheet" href="public/assets/css/modal.css">
+    <title>Dashboard Employee - Prototipo3</title>
+    
+</head>
+<body>
+    <div class="cabecera">
+        <a href="/cp-admin"><h1>LOGO</h1></a>
+        <div class="input-container">
+            <input type="text" placeholder="Busqueda">
+        </div>
+        <div class="menu">
+            <a href="#"><img class="icono accion" src="public/assets/images/calendario-mas.png" alt="" srcset="" id="btnAbrirModal1"></a>
+            <a href="#"><img class="icono accion" src="public/assets/images/campana.png" alt="" srcset=""></a>
+            <a href="/logout"><img class="icono accion" src="public/assets/images/dejar (1).png" alt="" srcset=""></a>
+            <a href="#"><img class="icono perfil" src="https://randomuser.me/api/portraits/men/90.jpg" alt="" srcset=""></a>
+            <div class="parrafo-perfil">
+                <p>Employee</p>
+                <p>Employee@Compania.cl</p>
+            </div>
+        </div>
+        
+    </div>
+    <!-- MODALS -->
+    <!-- **************************************************************************************************************** -->
+
+        <div id="modal-operaciones" class="modal">
+            <div class="modal-contenido">
+                <span id="btnCerrarModal1" class="cerrar">&times;</span>
+                <h1>Operaciones</h1>
+                <ul>
+                    <li><button id="btnRegistroHorario">Registrar horario ingreso</button></li>
+                    <li><button id="btnSolicitarRetiro">Solicitar permiso de retiro</button></li>
+                    <li><button id="btnVerAsistencia">Ver registro de asistencia</button></li>
+                </ul>
+                <div class="contenedor-form">
+
+                <div id="modal-form" class="modal-form" hidden>
+                    
+                    <fieldset>
+                        <legend>Solicitar retiro</legend>
+                        <form action="">
+                            <div>
+                                <label for="colores">Tipo </label>
+                                <select id="colores" name="tipo">
+                                    <option value="vacaciones"> Vacaciones</option>
+                                    <option value="licencia"> Licencia medica</option>
+                                    <option value="libre"> Retiro laboral</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                
+                                <label for="">
+                                    Fecha inicio&nbsp;&nbsp;&nbsp;</label><input type="date" placeholder="Seleccionar fecha inicio">
+                                </div>
+                                <div>
+                                    <label for="">Fecha fin&nbsp;&nbsp;&nbsp;</label><input type="date" placeholder="Seleccionar fecha fin">
+                                </div>
+                                <div>
+                                    <label for="">Razon&nbsp;&nbsp;&nbsp; </label><input type="text" placeholder="Razon de retiro aqui">
+                                </div>
+                                <div>
+                                <button>Enviar</button>
+                            </div>
+                            </form>
+                        </fieldset>
+                    
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="contenedor-medio">
+            <div class="input-container">
+                <button id="btnAbrirModal2" >Solicitar retiro</button>
+            </div>
+        </div>
+
+        <div id="modal-operaciones2" class="modal">
+            <div class="modal-contenido">
+                <span id="btnCerrarModal2" class="cerrar">&times;</span>
+              
+
+                <div id="modal-form2" class="modal-form" hidden>
+                    
+                    <fieldset>
+                        <legend>Solicitar retiro</legend>
+                        <form action="">
+                            <div>
+                                <label for="colores">Tipo </label>
+                                <select id="colores" name="tipo">
+                                    <option value="vacaciones"> Vacaciones</option>
+                                    <option value="licencia"> Licencia medica</option>
+                                    <option value="libre"> Retiro laboral</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                
+                                <label for="">
+                                    Fecha inicio&nbsp;&nbsp;&nbsp;</label><input type="date" placeholder="Seleccionar fecha inicio">
+                                </div>
+                                <div>
+                                    <label for="">Fecha fin&nbsp;&nbsp;&nbsp;</label><input type="date" placeholder="Seleccionar fecha fin">
+                                </div>
+                                <div>
+                                    <label for="">Razon&nbsp;&nbsp;&nbsp; </label><input type="text" placeholder="Razon de retiro aqui">
+                                </div>
+                                <div>
+                                <button>Enviar</button>
+                            </div>
+                            </form>
+                        </fieldset>
+                    
+                </div>
+            </div>
+
+            </div>
+        </div>
+        <!-- **************************************************************************************************************** -->
+         
+        
+        <!-- **************************************************************************************************************** -->
+        <div class="contenedor-cuerpo">
+    <div class="contenedor-sidebar">
+            <ul>
+                <li><a href="#"><img class="icono sidebar" src="public/assets/images/hogar.png" alt="" height="40px"></a></li>
+                <li><a href="#"><img class="icono sidebar" src="public/assets/images/comentario-alt.png" alt="" height="40px"></a></li>
+                <li><a href="#"><img class="icono sidebar" src="public/assets/images/ajustes.png" alt="" height="40px"></a></li>
+            </ul>
+        </div>
+        <div class="contenedor-bloques">
+            <div class="tabla">
+                <div class="filtros">
+                    <h2>Informe de asistencia</h2>
+                    <div class="circulo">•<b>Todo</b></div>
+                    <div class="circulo">•Hoy</div>
+                    <div class="circulo">•Ayer</div>
+                    <div class="input-fecha">
+                        <input type="datetime" disabled value="22-23-2023">
+                    </div>
+                </div>
+                <table >
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Dia</th>
+                            <th>Hora inicio</th>
+                            <th>-----</th>
+                            <th>Hora fin</th>
+                            <th>Horas trabajadas</th>
+                            <th>Estado</th>
+              
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                        <tr>
+                            <td>2023-12-12</td>
+                            <td>Lunes</td>
+                            <td>07:00:00</td>
+                            <td></td>
+                            <td>14:00:00</td>
+                            <td>7</td>
+                            <td>Trabajo en terreno</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="./public/assets/js/script-dashboard-employee.js"></script>
+</body>
+</html>

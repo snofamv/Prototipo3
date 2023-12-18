@@ -244,7 +244,6 @@ body {
   }
 }
 
-
 .input-container {
   display: flex;
   width: 180px;
@@ -266,3 +265,132 @@ body {
     box-shadow: 0 0 10px 1px rgb(48, 148, 255); /* Ajusta el valor del desenfoque */
   }
 }
+
+/* Media Query para pantallas más pequeñas que 600px */
+@media (max-width: 1367px) {
+
+  /* *********************************************** */
+/* *********************************************** */
+/* CONTENEDOR DEL CUERPO */
+.contenedor-cuerpo {
+  display: flex;
+  width: 91vw;
+
+  
+  /* CONTENEDOR BARRA LATERAL */
+  .contenedor-sidebar {
+    height: 350px;
+    border-radius: 15px;
+    background-color: whitesmoke;
+    display: flex;
+    padding: 0rem 0.6rem 0px 0.6rem;
+    box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.241); /* Ajusta el valor del desenfoque */
+
+  }
+  /************************************************************************/
+  /* CONTENEDOR BLOQUES */
+  .contenedor-bloques {
+    /* background-color: orange; */
+    
+    display: flex;
+    padding: 0px 6rem;
+    align-items: center;
+    .contenedor {
+      
+      justify-content: flex-start;
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    /* background-color: red; */
+    /* *********************************************** */
+
+    .bloque {
+      
+      transition: scale 0.2s ease;
+      justify-content: center;
+      width: 250px;
+      height: 100px;
+      background-color: whitesmoke;
+      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.241); /* Ajusta el valor del desenfoque */
+      padding: 2rem;
+      /* border: 1px solid; */
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+
+      &.operacion {
+        height: 150px;
+        width: 160px;
+        /* align-items: start; */
+        justify-content: space-evenly;
+        margin-bottom: 10rem;
+
+        h2{
+          font-size: 20px;
+        }
+      }
+      /* CABEZA DEL BLOQUE */
+      .bloque-cabecera {
+        display: flex;
+        align-items: center;
+        /* justify-content: space-around;  */
+        h1 {
+          /* TEXTOS */
+          &.titulo {
+            
+            color: #252c58;
+            font-family: arial;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            
+          
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+    .bloque {
+      transition: scale 0.2s ease;
+      justify-content: center;
+      width: 250px;
+      height: 150px;
+      background-color: whitesmoke;
+      box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.241); /* Ajusta el valor del desenfoque */
+      padding: 1.7rem;
+      /* border: 1px solid; */
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+
+      &.operacion {
+        height: 200px;
+        align-items: center;
+      }
+      /* CABEZA DEL BLOQUE */
+      .bloque-cabecera {
+        display: flex;
+        justify-content: space-between;
+        h1 {
+          /* TEXTOS */
+          &.titulo {
+            color: #252c58;
+            font-family: arial;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+          }
+        }
+      }
+    }
+  }
