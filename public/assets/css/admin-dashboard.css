@@ -97,7 +97,7 @@ body {
 /* CONTENEDOR DEL CUERPO */
 .contenedor-cuerpo {
   display: flex;
-  width: 90%;
+  width: 95%;
 
   /* CONTENEDOR BARRA LATERAL */
   .contenedor-sidebar {
@@ -157,7 +157,7 @@ body {
       
       transition: scale 0.2s ease;
       justify-content: center;
-      width: 180px;
+      width: 170px;
       height: 100px;
       background-color: whitesmoke;
       box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.241); /* Ajusta el valor del desenfoque */
