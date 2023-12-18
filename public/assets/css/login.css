@@ -6,14 +6,16 @@
 }
 body{
     background: radial-gradient(circle, #b6d9ff, #a8a1de4e);
-
+    margin-top: 2%;
 }
 
 .div-form{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
+    img{
+        height: 200px;
+    }
 }
 form{
     padding-top: 1rem;

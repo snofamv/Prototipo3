@@ -11,7 +11,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2rem;
 }
 .cabecera {
   width: 1200px;
@@ -25,13 +25,16 @@ body {
   border-radius: 15px;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.241); /* Ajusta el valor del desenfoque */
 
-  h1 {
-    color: #252c58;
-    font-family: Arial;
-    font-size: 38px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
+  a {
+    text-decoration: none;
+    h1 {
+      color: #252c58;
+      font-family: Arial;
+      font-size: 38px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
   }
 
   .input-container {
@@ -241,14 +244,15 @@ body {
   }
 }
 
+
 .input-container {
   display: flex;
-  width: 200px;
+  width: 180px;
   button {
     transition: box-shadow 0.3s ease;
     background-color: rgba(0, 43, 73, 0.447);
     width: 100%;
-    padding: 8px 30px 8px 10px; /* Ajusta el padding según sea necesario */
+    /* padding: 8px 30px 8px 10px;  */
     border: 1px solid lightgray;
     border-radius: 10px;
     box-sizing: border-box;
@@ -256,7 +260,7 @@ body {
     background-repeat: no-repeat;
     background-position: 8px center; /* Ajusta la posición del icono */
     background-size: 25px; /* Ajusta el tamaño del icono */
-    padding-left: 30%; /* Asegura espacio suficiente para el icono */
+    padding-left: 15%; /* Asegura espacio suficiente para el icono */
   }
   button:hover {
     box-shadow: 0 0 10px 1px rgb(48, 148, 255); /* Ajusta el valor del desenfoque */

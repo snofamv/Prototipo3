@@ -1,64 +1,85 @@
 // Obtener elementos del DOM
-var modal = document.getElementById("modal-registrar-hora");
-var btn = document.getElementById("abrirModalBtn");
-var closeBtn = document.getElementById("cerrarBtn");
+// Obtener el elemento del párrafo
+const contador = document.getElementById('hora-hora');
 
-// Función para abrir el modal
-btn.addEventListener("click", function () {
-  modal.style.display = "block";
+// Función para actualizar el reloj contador
+function actualizarReloj() {
+  // Obtener la hora actual
+  const ahora = new Date();
+
+  // Formatear la hora, minutos y segundos
+  const horas = String(ahora.getHours()).padStart(2, '0');
+  const minutos = String(ahora.getMinutes()).padStart(2, '0');
+  const segundos = String(ahora.getSeconds()).padStart(2, '0');
+
+  // Mostrar la hora en el párrafo
+  contador.textContent = `${horas}:${minutos}:${segundos}`;
+}
+
+// Actualizar el reloj cada segundo
+setInterval(actualizarReloj, 1000);
+
+// Iniciar el reloj cuando la página se carga por primera vez
+actualizarReloj();
+ 
+var modal2 = document.getElementById("modal-operaciones2");
+var form2 = document.getElementById("modal-form2");
+var btnAbrirForm2 = document.getElementById("btnAbrirModal2");
+var btnCerrar2 = document.getElementById("btnCerrarModal2");
+
+// **************************************************************************
+// Función para abrir el modal form1
+btnAbrirForm2.addEventListener("click", function () {
+  modal2.style.display = "block";
+  form2.style.display = "block";
 });
 
 // Función para cerrar el modal
-closeBtn.addEventListener("click", function () {
-  modal.style.display = "none";
+btnCerrar2.addEventListener("click", function () {
+  modal2.style.display = "none";
+  form2.style.display = "none";
 });
 
 // Cerrar el modal si el usuario hace clic fuera del contenido
 window.addEventListener("click", function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+    form2.style.display = "none";
   }
 });
 
-const grafico = (idElemento, datos) => {
-  const canvas = document.getElementById(`${idElemento}`);
-  const ctx = canvas.getContext("2d");
 
-  const centerX = canvas.width / 2;
-  const centerY = canvas.height / 2;
-  const radius = 40;
-  const startAngle = 0;
-  const porcentaje = datos.porcentaje;
-  // const endAngle = Math.PI * 1.5; // 1.5 PI es el ángulo que representa el 100% del gráfico circular
-  const endAngle = (Math.PI * 2 * porcentaje) / 100; // 1.5 PI es el ángulo que representa el 100% del gráfico circular
+const labels = ["Ausentes", "Asistencia"];
+  const colors = ["#FF0000", "rgb(99,201,122)"];
+  const graph = document.getElementById(`graph1`);
+  const data = {
+    labels: labels,
+    datasets: [
+      {
+        data: [47, 412],
+        backgroundColor: colors,
+      },
+    ],
+  };
+  const config = {
+    type: "pie",
+    data: data,
+  };
+  new Chart(graph, config);
+  var ctx = document.getElementById(`graph1`);
+  var myChart = new Chart(ctx, {
+    type: "bar",
+    data: data,
+    options: {
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              beginAtZero: true,
+            },
+          },
+        ],
+      },
+    },
+  });
 
-  // Dibujar el arco (gráfico circular)
-  ctx.beginPath();
-  ctx.arc(centerX, centerY, radius, 5, 0, endAngle);
-  ctx.fillStyle = "rgba(0, 0, 0, 0.3)"; // Color de la sombra
-  ctx.lineWidth = 20; // Grosor del borde
-  ctx.strokeStyle = porcentaje>50?"#252c58":"#B80000"; // Color del borde
-
-  ctx.stroke();
-
-  // Rellenar el área exterior con un color sólido para ocultar la transparencia
-  ctx.beginPath();
-  ctx.arc(centerX, centerY, radius + 5, 0, Math.PI * 2);
-  ctx.fillStyle = "#fff"; // Color de fondo
-  ctx.fill();
-
-  // Escribir el valor dentro del círculo
-  ctx.font = "20px Arial"; // Tamaño y tipo de fuente
-  ctx.fillStyle = "#333"; // Color del texto
-  ctx.textAlign = "center"; // Alineación del texto
-  ctx.textBaseline = "middle"; // Alineación vertical del texto
-  ctx.fillText(`${porcentaje}%`, centerX, centerY);
-  return;
-};
-
-grafico("miCanvas1", {porcentaje: Math.ceil(Math.random(1,100)*100)});
-grafico("miCanvas2", {porcentaje: Math.ceil(Math.random(1,100)*100)});
-grafico("miCanvas3", {porcentaje: Math.ceil(Math.random(1,100)*100)});
-grafico("miCanvas4", {porcentaje: Math.ceil(Math.random(1,100)*100)});
-grafico("miCanvas5", {porcentaje: Math.ceil(Math.random(1,100)*100)});
-grafico("miCanvas6", {porcentaje: Math.ceil(Math.random(1,100)*100)});

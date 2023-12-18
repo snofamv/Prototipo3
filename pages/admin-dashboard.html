@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/admin-dashboard.css">
-    <link rel="stylesheet" href="assets/css/modal.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="public/assets/css/admin-dashboard.css">
+    <link rel="stylesheet" href="public/assets/css/modal.css">
+    <title>Dashboard Admin - Prototipo3</title>
 </head>
 <body>
     <div class="cabecera">
-        <h1>LOGO</h1>
+        <a href="/cp-employee"><h1>LOGO</h1></a>
         <div class="input-container">
             <input type="text" placeholder="Busqueda">
         </div>
         <div class="menu">
-            <a href="#"><img class="icono accion" src="assets/images/calendario-mas.png" alt="" srcset="" id="openModalBtn"></a>
-            <a href="#"><img class="icono accion" src="assets/images/campana.png" alt="" srcset=""></a>
-            <a href="login.html"><img class="icono accion" src="assets/images/dejar (1).png" alt="" srcset=""></a>
+            <a href="#"><img class="icono accion" src="public/assets/images/calendario-mas.png" alt="" srcset="" id="openModalBtn"></a>
+            <a href="#"><img class="icono accion" src="public/assets/images/campana.png" alt="" srcset=""></a>
+            <a href="/logout"><img class="icono accion" src="public/assets/images/dejar (1).png" alt="" srcset=""></a>
             <a href="#"><img class="icono perfil" src="https://randomuser.me/api/portraits/men/90.jpg" alt="" srcset=""></a>
             <div class="parrafo-perfil">
                 <p>Admin</p>
@@ -42,28 +42,79 @@
         </div>
     </div>
     <!-- **************************************************************************************************************** -->
+    <div class="contenedor-medio">
+        <div class="input-container">
+            <button id="btnAbrirModal2" >Generar informe</button>
+        </div>
+    </div>
+
+    <div id="modal-operaciones2" class="modal">
+        <div class="modal-contenido">
+            <span id="btnCerrarModal2" class="cerrar">&times;</span>
+          
+
+            <div id="modal-form2" class="modal-form" hidden>
+                
+                <fieldset>
+                    <legend>Generador de informes</legend>
+                    <form action="">
+                        <div>
+                            <label for="colores">Tipo informe</label>
+                            <select id="colores" name="tipo">
+                                <option value="licencia">Empleados</option>
+                                <option value="licencia">Empleados/asistencia</option>
+                                <option value="libre">Empresas</option>
+                                <option value="libre">Empresas/empleados</option>
+                                <option value="libre">Empresas/empleados/comuna</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            
+                            <label for="">
+                                Fecha inicio&nbsp;&nbsp;&nbsp;</label><input type="date" placeholder="Seleccionar fecha inicio">
+                            </div>
+                            <div>
+                                <label for="">Fecha fin&nbsp;&nbsp;&nbsp;</label><input type="date" placeholder="Seleccionar fecha fin">
+                            </div>
+                            <div>
+                            <button>Buscar datos</button>
+                        </div>
+                        </form>
+                    </fieldset>
+                
+            </div>
+        </div>
+
+        </div>
+    </div>
+    <!-- **************************************************************************************************************** -->
+     
+    <!-- **************************************************************************************************************** -->
 <div class="contenedor-cuerpo">
     <div class="contenedor-sidebar">
             <ul>
-                <li><a href="#"><img class="icono sidebar" src="assets/images/hogar.png" alt="" height="40px"></a></li>
-                <li><a href="#"><img class="icono sidebar" src="assets/images/comentario-alt.png" alt="" height="40px"></a></li>
-                <li><a href="#"><img class="icono sidebar" src="assets/images/ajustes.png" alt="" height="40px"></a></li>
+                <li><a href="#"><img class="icono sidebar" src="public/assets/images/hogar.png" alt="" height="40px"></a></li>
+                <li><a href="#"><img class="icono sidebar" src="public/assets/images/comentario-alt.png" alt="" height="40px"></a></li>
+                <li><a href="#"><img class="icono sidebar" src="public/assets/images/ajustes.png" alt="" height="40px"></a></li>
             </ul>
     </div>
     <div class="contenedor-bloques">
         <div class="contenedor">
             <div class="bloque operacion">
                 <div class="bloque-cabecera">
-                    <h1 class="titulo">Nuevo Documento</h1>
-                        <div class="bloque-icono1">
-                            <img src="assets/images/votacion.png" alt="">
-                        </div>
+                    <div class="bloque-icono1">
+                        <img src="public/assets/images/dom.png" alt="">
+                    </div>
+                    <h1 id ="hora-hora" class="titulo ">21:55:00</h1>
+                </div>
+                <div>
+                    <h2 class="titulo"><span>Hoy:</span><br></nr>2023-12-25</h2>
                 </div>
                 <div class="bloque-cuerpo"> 
-                        <p class="parrafo">Crear un informe</p>
                             <div class="bloque-icono2">
                                 <span class="plus">+</span>
-                                <a  href="informes.html"><p class="parrafo2">Cick aqui para generar informe!</p></a>
+                                <a  href="informes.html"><p class="parrafo2">0 reportes / incidencias hoy</p></a>
                             </div>
                 </div>
             </div>
@@ -74,7 +125,7 @@
                 <div class="bloque-cabecera">
                     <h1 class="titulo">452</h1>
                         <div class="bloque-icono1">
-                            <img src="assets/images/usuarios-medicos.png" alt="">
+                            <img src="public/assets/images/usuarios-medicos.png" alt="">
                         </div>
                 </div>
                 <div class="bloque-cuerpo"> 
@@ -89,7 +140,7 @@
                 <div class="bloque-cabecera">
                     <h1 class="titulo">3</h1>
                         <div class="bloque-icono1">
-                            <img src="assets/images/edificio.png" alt="">
+                            <img src="public/assets/images/edificio.png" alt="">
                         </div>
                 </div>
                 <div class="bloque-cuerpo"> 
@@ -104,13 +155,13 @@
                 <div class="bloque-cabecera">
                     <h1 class="titulo">27</h1>
                         <div class="bloque-icono1">
-                            <img src="assets/images/hora-veinticuatro.png" alt="">
+                            <img src="public/assets/images/hora-veinticuatro.png" alt="">
                         </div>
                 </div>
                 <div class="bloque-cuerpo"> 
                         <p class="parrafo">Empleados ausentes</p>
                             <div class="bloque-icono2">
-                                <span class="falta"><img src="assets/images/grafico1.png" height="15"></span>
+                                <span class="falta"><img src="public/assets/images/grafico1.png" height="15"></span>
                                 <p class="parrafo2">22% Mas que ayer!</p>
                             </div>
                 </div>
@@ -120,7 +171,7 @@
                 <div class="bloque-cabecera">
                     <h1 class="titulo">23</h1>
                         <div class="bloque-icono1">
-                            <img src="assets/images/vista-de-calle.png  " alt="">
+                            <img src="public/assets/images/vista-de-calle.png  " alt="">
                         </div>
                 </div>
                 <div class="bloque-cuerpo"> 
@@ -135,13 +186,13 @@
                 <div class="bloque-cabecera">
                     <h1 class="titulo">422</h1>
                         <div class="bloque-icono1">
-                            <img src="assets/images/consultar-calendario.png" alt="">
+                            <img src="public/assets/images/consultar-calendario.png" alt="">
                         </div>
                 </div>
                 <div class="bloque-cuerpo"> 
                         <p  class="parrafo">Asistencia empleados</p>
                             <div class="bloque-icono2">
-                                <span class="falta"><img src="assets/images/grafico1.png" height="15" srcset=""></span>
+                                <span class="falta"><img src="public/assets/images/grafico1.png" height="15" srcset=""></span>
                                 <p class="parrafo2">5% Menos que ayer!</p>
                             </div>
                 </div>
@@ -150,7 +201,7 @@
                 <div class="bloque-cabecera">
                     <h1 class="titulo">3</h1>
                         <div class="bloque-icono1">
-                            <img src="assets/images/licencia (1).png" alt="">
+                            <img src="public/assets/images/licencia (1).png" alt="">
                         </div>
                 </div>
                 <div class="bloque-cuerpo"> 
@@ -164,8 +215,19 @@
         </div>
 
         </div>
+        <div class="contenedor graficos">
+            <div>
+                <button id="btnGrafico1">1</button>
+                <button id="btnGrafico2">2</button>
+                <button id="btnGrafico3">3</button>
+                <button id="btnGrafico4">4</button>
+            </div>
+                <canvas id="graph1"></canvas>            
+                <canvas id="graph2"></canvas>            
+        </div>
     </div>
 </div>
-<script src="./assets/js/script.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+<script src="./public/assets/js/script-dashboard-admin.js"></script>
 </body>
 </html>

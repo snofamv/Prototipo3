@@ -5,13 +5,14 @@
 }
 body {
   font-family: arial;
+  /* width: 80%; */
   /* dar mas padding para centrar mas  o achicar contenedor */
   padding: 1rem;
   background-color: rgb(236, 235, 235);
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 3rem;
+  gap: 1rem;
 }
 .cabecera {
   width: 1200px;
@@ -24,14 +25,16 @@ body {
   /* border: 1px solid #FFFFFF; */
   border-radius: 15px;
   box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.241); /* Ajusta el valor del desenfoque */
-
-  h1 {
-    color: #252c58;
-    font-family: Arial;
-    font-size: 38px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
+  a {
+    text-decoration: none;
+    h1 {
+      color: #252c58;
+      font-family: Arial;
+      font-size: 38px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
   }
 
   .input-container {
@@ -62,7 +65,7 @@ body {
       margin-right: 1rem;
       transition: scale 0.3s ease;
     }
-    .accion{
+    .accion {
       filter: hue-rotate(240deg); /* Cambia el tono de la imagen a azul */
     }
     .accion:hover {
@@ -94,6 +97,8 @@ body {
 /* CONTENEDOR DEL CUERPO */
 .contenedor-cuerpo {
   display: flex;
+  width: 90%;
+
   /* CONTENEDOR BARRA LATERAL */
   .contenedor-sidebar {
     height: 400px;
@@ -126,10 +131,12 @@ body {
   /* CONTENEDOR BLOQUES */
   .contenedor-bloques {
     /* background-color: orange; */
+    
     display: flex;
     padding: 0px 4rem;
     align-items: center;
     .contenedor {
+      
       justify-content: flex-start;
       display: flex;
       flex-direction: row-reverse;
@@ -139,7 +146,6 @@ body {
     /* background-color: red; */
     /* *********************************************** */
 
-
     .bloque:hover {
       scale: 100.3%;
       box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.285); /* Ajusta el valor del desenfoque */
@@ -148,9 +154,10 @@ body {
     /*BLOQUE */
 
     .bloque {
+      
       transition: scale 0.2s ease;
       justify-content: center;
-      width: 240px;
+      width: 200px;
       height: 100px;
       background-color: whitesmoke;
       box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.241); /* Ajusta el valor del desenfoque */
@@ -162,8 +169,14 @@ body {
       gap: 11px;
 
       &.operacion {
-        height: 200px;
-        align-items: center;
+        height: 180px;
+        width: 250px;
+        /* align-items: start; */
+        justify-content: space-evenly;
+
+        h2{
+          font-size: 22px;
+        }
       }
       /* CABEZA DEL BLOQUE */
       .bloque-cabecera {
@@ -174,7 +187,7 @@ body {
           &.titulo {
             color: #252c58;
             font-family: arial;
-            font-size: 42px;
+            font-size: 32px;
             font-style: normal;
             font-weight: 300;
             line-height: normal;
@@ -211,8 +224,8 @@ body {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        height: 42px;
-        width: 42px;
+        height: 45px;
+        width: 45px;
         border-radius: 30px;
         background-color: rgba(169, 169, 169, 0.281);
         img {
@@ -256,5 +269,58 @@ body {
         }
       }
     }
+  }
+}
+
+.contenedor-medio {
+  /* background-color: red; */
+  width: 80%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: end;
+  button {
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    background-color: rgba(0, 110, 255, 0.132);
+    transform: box-shadow 1s ease;
+    font-size: 16px;
+  }
+}
+
+.input-container {
+  display: flex;
+  width: 180px;
+  button {
+    transition: box-shadow 0.3s ease;
+    background-color: rgba(0, 43, 73, 0.447);
+    width: 100%;
+    /* padding: 8px 30px 8px 10px;  */
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-image: url("../images/cuestionario.png"); /* Ruta a tu archivo de icono */
+    background-repeat: no-repeat;
+    background-position: 8px center; /* Ajusta la posición del icono */
+    background-size: 25px; /* Ajusta el tamaño del icono */
+    padding-left: 15%; /* Asegura espacio suficiente para el icono */
+  }
+  button:hover {
+    box-shadow: 0 0 10px 1px rgb(48, 148, 255); /* Ajusta el valor del desenfoque */
+  }
+}
+
+.graficos{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  /* justify-content: center; */
+  align-items: center;
+
+  button{
+    width: 50px;
+    border-radius: 8px;
+    opacity: 80%;
+    
   }
 }

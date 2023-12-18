@@ -13,12 +13,12 @@
 
 /* Estilos para el contenido del modal */
 .modal-contenido {
-  padding: 3rem;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 5rem auto;
   border: 1px solid #888;
   height: 450px;
   width: 450px;

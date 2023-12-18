@@ -24,13 +24,13 @@ btnCerrar2.addEventListener("click", function () {
   form2.style.display = "none";
 });
 
-// // Cerrar el modal si el usuario hace clic fuera del contenido
-// window.addEventListener("click", function (event) {
-//   if (event.target == modal2) {
-//     modal2.style.display = "none";
-//     form2.style.display = "none";
-//   }
-// });
+// Cerrar el modal si el usuario hace clic fuera del contenido
+window.addEventListener("click", function (event) {
+  if (event.target == modal2) {
+    modal2.style.display = "none";
+    form2.style.display = "none";
+  }
+});
 // **************************************************************************
 // Función para abrir el modal form1
 btnAbrirForm1.addEventListener("click", function () {
